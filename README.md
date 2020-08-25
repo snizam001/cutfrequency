@@ -2,7 +2,7 @@
 	Simple script to calculate cut frequency from BAM files (pair-end reads): greenCUT&RUN or CUT&RUN protocol
 	
 	Citation: 
-	greenCUT&RUN: a rapid and efficient genome profiling approach for transcription and chromatin regulatory proteins.
+	greenCUT&RUN: a rapid and efficient genome profiling approach for transcription and chromatin regulatory proteins. (unpublished)
 
 REQUIREMENTS:
 
