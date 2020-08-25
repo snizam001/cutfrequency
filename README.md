@@ -48,7 +48,7 @@ Options:
 
 EXAMPLE:
 
-	Rscript ./run.R -a ./example/experiment -b ./example/control -c ./example/SpikeIn-experiment -d ./example/SpikeIn-control  -m ./example/FOS-motifs.txt -x 7 --script_folder ./ -n 20 
+	Rscript ./run.R -a ./Example/experiment -b ./Example/control -c ./Example/SpikeIn-experiment -d ./Example/SpikeIn-control  -m ./Example/FOS-motifs.txt -x 7 --script_folder ./ -n 20 
 
 OUTPUT:
 
