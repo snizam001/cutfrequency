@@ -37,7 +37,7 @@ centre=opt$centreOfmotif
 	
 print ('=============================')
 print ('=== Cutfrequency calculation ')
-print ('===        @nizam         ===')
+print ('=== snizam001@gmail.com   ===')
 print ('=============================')
 
 #---- data preparation: part1
