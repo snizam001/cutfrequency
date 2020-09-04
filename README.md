@@ -38,7 +38,7 @@ Options:
 		Desired centre of motif on positive DNA strand
 
 	-s CHARACTER, --script_folder=CHARACTER
-		Folder location with other assessory scripts of this tool
+		Folder location where filepreparation.pl of the current tool is present
 
 	-n NUMERIC, --thread=NUMERIC
 		Number of thread
