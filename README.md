@@ -3,7 +3,7 @@ Simple script to calculate cut frequency around transcription factor binding sit
 
 ![Fig 4](https://user-images.githubusercontent.com/28807444/130489546-74e51a39-23d4-494d-b810-29eb42efa2c1.jpg)
 
-Citation: greenCUT&RUN: a rapid and efficient genome profiling approach for transcription and chromatin regulatory proteins. (unpublished)
+Citation: Integrating quantitative proteomics with accurate genome profiling of transcription factors by greenCUT&RUN (https://doi.org/10.1093/nar/gkab038)
 
 REQUIREMENTS:
 
