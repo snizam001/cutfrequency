@@ -46,10 +46,3 @@ system("rm $bam1.bam2bed.txt $bam1-sortedByName.bam");
 system("windowBed -a $motifFile -b $bam1.bed3 -w 1000 > $bam1.input");
 
 #$frmt = "chr1	23409	23420	-	8.227320	GGTGAGTCAGTG	chr1	23159	23370	M01516:364:000000000-CLDFT:1:1115:26082:22502	1	.";
-
-#$v = `head  $bam1.input -n1 | awk '{print NF}'`;
-#chomp $v;
-
-#if ($v != 12) {
-#	print "format of the $bam1.input is not correct\n";
-#}
