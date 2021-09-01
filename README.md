@@ -1,11 +1,13 @@
 # cutfrequency
-Simple script to calculate cut frequency around transcription factor binding sites using BAM files (pair-end reads): greenCUT&RUN or CUT&RUN protocol
+Simple script to calculate cut frequency around transcription factor binding sites using BAM files (pair-end reads): 
+greenCUT&RUN or CUT&RUN protocol
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/28807444/130489546-74e51a39-23d4-494d-b810-29eb42efa2c1.jpg" />
 </p>
 
-Citation: Integrating quantitative proteomics with accurate genome profiling of transcription factors by greenCUT&RUN (https://doi.org/10.1093/nar/gkab038)
+Citation: Integrating quantitative proteomics with accurate genome profiling of transcription 
+	factors by greenCUT&RUN (https://doi.org/10.1093/nar/gkab038)
 
 REQUIREMENTS:
 
@@ -51,15 +53,20 @@ Options:
 
 EXAMPLE:
 
-	A) To generate motif file proceed as follows (install homer):
+	A) To generate motif file of the protein of interest proceed as follows (install homer):
 	
 		1) download file contains PWM of the motifs
 			http://homer.ucsd.edu/homer/custom.motifs
-		2) find protein of interest in the custom.motifs and copy-paste the PWM in new file (e.g. tp53.pwm or fos.pwm)
-		3) run following command to generate bed file containing location of whole genome motifs (http://homer.ucsd.edu/homer/motif/genomeWideMotifScan.html)
+		2) find protein of interest in the custom.motifs and 
+		copy-paste the PWM in new file (e.g. tp53.pwm or fos.pwm)
+		
+		3) run following command to generate bed file containing location 
+		of whole genome motifs (http://homer.ucsd.edu/homer/motif/genomeWideMotifScan.html)
+		
 		scanMotifGenomeWide.pl fos.pwm hg38 | cut -f2- > FOS-motifs.txt
 	
-	B) Rscript ./run.R -a ./Example/experiment -b ./Example/control -c ./Example/SpikeIn-experiment -d ./Example/SpikeIn-control  -m ./Example/FOS-motifs.txt -x 7 --script_folder ./ -n 20 
+	B) Rscript ./run.R -a ./Example/experiment -b ./Example/control -c ./Example/SpikeIn-experiment
+	-d ./Example/SpikeIn-control  -m ./Example/FOS-motifs.txt -x 7 --script_folder ./ -n 20 
 
 OUTPUT:
 
@@ -67,11 +74,18 @@ OUTPUT:
 	experiment.input - Experiment's read overlapping with motifs
 	control.bed3 - Genomic coordinates of the pair-end reads
 	control.input - Control's read overlapping with motifs
-	SpikeIn-experiment.bed3 - Genomic coordinates of the pair-end reads. For counting Spike-In reads in the experiment.
-	SpikeIn-control.bed3 - Genomic coordinates of the pair-end reads. For counting Spike-In reads in the control.
-	control.counts.txt: Count of read ends for each motif's location. -100 to 100 bps from centre of motif 
-	experiment.counts.txt:  Count of read ends for each motif's location. -100 to 100 bps from centre of motif 
-	experiment.normalize.txt: Spike-in normalized read ends in experiment compare to control, for each motif's location. -100 to 100 bps from centre of motif 
-	experiment.cutfrequency.txt: Cutfrquency at each location from -100 to 100
+	SpikeIn-experiment.bed3 - Genomic coordinates of the pair-end reads. 
+				For counting Spike-In reads in the experiment.
+	SpikeIn-control.bed3 - Genomic coordinates of the pair-end reads. 
+				For counting Spike-In reads in the control.
+	control.counts.txt: Count of read ends for each motif's location. 
+				-100 to 100 bps from centre of motif 
+	experiment.counts.txt:  Count of read ends for each motif's location. 
+				-100 to 100 bps from centre of motif 
+	experiment.normalize.txt: Spike-in normalized read ends in experiment 
+				compare to control, for each motif's location.
+				-100 to 100 bps from centre of motif 
+	experiment.cutfrequency.txt: Cutfrquency at each location from 
+				-100 to 100
 	experiment.jpeg: visualization
 
