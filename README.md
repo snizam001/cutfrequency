@@ -51,7 +51,15 @@ Options:
 
 EXAMPLE:
 
-	Rscript ./run.R -a ./Example/experiment -b ./Example/control -c ./Example/SpikeIn-experiment -d ./Example/SpikeIn-control  -m ./Example/FOS-motifs.txt -x 7 --script_folder ./ -n 20 
+	A) To generate motif file proceed as follows (install homer):
+	
+		1) download file contains PWM of the motifs
+			http://homer.ucsd.edu/homer/custom.motifs
+		2) find protein of interest in the custom.motifs and copy-paste the PWM in new file (e.g. tp53.pwm or fos.pwm)
+		3) run following command to generate bed file containing location of whole genome motifs (http://homer.ucsd.edu/homer/motif/genomeWideMotifScan.html)
+		scanMotifGenomeWide.pl fos.pwm hg38 | cut -f2- > FOS-motifs.txt
+	
+	B) Rscript ./run.R -a ./Example/experiment -b ./Example/control -c ./Example/SpikeIn-experiment -d ./Example/SpikeIn-control  -m ./Example/FOS-motifs.txt -x 7 --script_folder ./ -n 20 
 
 OUTPUT:
 
