@@ -40,22 +40,45 @@ print ('=== Cutfrequency calculation ')
 print ('=== snizam001@gmail.com   ===')
 print ('=============================')
 
+if(!(file.exists(paste(myfolder,"/filePreparation.pl",sep="")))) {
+	print(paste("filePreparation.pl file is not present in ",myfolder,sep=""));
+	stop()
+}
+
 #---- data preparation: part1
 print('==== file preparation: bamfile 1')
 f=paste("perl ",myfolder,"/filePreparation.pl ", bam1," ", mymotif , " ", mythread,sep="" )
-system(f)
+x = system(f)
+
+if (x != 0)
+	{ 
+		stop()
+	}
+
 print('==== file preparation: bamfile 2')
 f=paste("perl ",myfolder,"/filePreparation.pl ", bam2," ", mymotif, " " , mythread,sep="" )
-system(f)
+x = system(f)
+
+if (x != 0)
+	{ 
+		stop()
+	}
+
 print('==== file preparation: bamfile 3')
 f=paste("perl ",myfolder,"/filePreparation.pl ", bam3," ", mymotif, " " , mythread,sep="" )
-system(f)
+x = system(f)
+if (x != 0)
+	{ 
+		stop()
+	}
+
 print('==== file preparation: bamfile 4')
 f=paste("perl ",myfolder,"/filePreparation.pl ", bam4," ", mymotif, " " , mythread,sep="" )
-system(f)
-
-
-
+x = system(f)
+if (x != 0)
+	{ 
+		stop()
+	}
 
 #---- data preparation: part2
 d <- fread(paste(bam1,'.input',sep=''))
