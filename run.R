@@ -72,6 +72,7 @@ if (x != 0)
 		stop()
 	}
 
+system(paste("rm ", bam3, ".input",sep=""))
 print('==== file preparation: bamfile 4')
 f=paste("perl ",myfolder,"/filePreparation.pl ", bam4," ", mymotif, " " , mythread,sep="" )
 x = system(f)
@@ -79,6 +80,7 @@ if (x != 0)
 	{ 
 		stop()
 	}
+system(paste("rm ", bam4, ".input",sep=""))
 
 #---- data preparation: part2
 d <- fread(paste(bam1,'.input',sep=''))
