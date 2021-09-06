@@ -64,6 +64,8 @@ EXAMPLE:
 		of whole genome motifs (http://homer.ucsd.edu/homer/motif/genomeWideMotifScan.html)
 		
 		scanMotifGenomeWide.pl fos.pwm hg38 | cut -f2- > FOS-motifs.txt
+		or
+		scanMotifGenomeWide.pl fos.pwm genome.fa | cut -f2- > FOS-motifs.txt
 	
 	B) Rscript ./run.R -a ./Example/experiment -b ./Example/control -c ./Example/SpikeIn-experiment
 	-d ./Example/SpikeIn-control  -m ./Example/FOS-motifs.txt -x 7 --script_folder ./ -n 20 
