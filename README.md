@@ -7,8 +7,9 @@ greenCUT&RUN or CUT&RUN protocol
 </p>
 
 Citation: 
-	Integrating quantitative proteomics with accurate genome profiling of transcription 
-	factors by greenCUT&RUN (https://doi.org/10.1093/nar/gkab038)
+	
+	Nizamuddin et al (2021), Integrating quantitative proteomics with accurate genome profiling of transcription 
+	factors by greenCUT&RUN. Nucleic Acids Research, 46(9) e49 (https://doi.org/10.1093/nar/gkab038)
 
 REQUIREMENTS:
 
