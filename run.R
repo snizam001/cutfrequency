@@ -156,7 +156,7 @@ mytable_ctrl[,as.character(seq(-100,100,1))]->mytable_ctrl
 
 
 print ('=== output of counts in table ')
-write.table(mytable_ctrl[rowSums(mytable_expr) > 1,],paste(bam2,'.counts.txt',sep=''),quote=F,sep='\t',col.names=F)
+write.table(mytable_ctrl[rowSums(mytable_ctrl) > 1,],paste(bam2,'.counts.txt',sep=''),quote=F,sep='\t',col.names=F)
 write.table(mytable_expr[rowSums(mytable_expr) > 1,],paste(bam1,'.counts.txt',sep=''),quote=F,sep='\t',col.names=F)
 #---- normalization
 
@@ -176,7 +176,7 @@ out_frequency=data.frame(Distance=as.numeric(names(z)),Frequency=as.numeric(z))
 write.table(out_frequency,paste(bam1,'.cutfrequency.txt',sep=''),quote=F,sep='\t',col.names=F)
 print(z)
 maximum=max(z)
-minimum=maximum* -0.05
+minimum=min(z)
 jpeg(paste(bam1,'.jpeg',sep=''),unit='in',res=300,height=4.5,width=4.5)
 plot(as.numeric(names(z)),z,ylim=c(minimum,maximum),type='n',xlab='Position (bps)',ylab='Cut frequency')
 cc = nchar(experiment[1,6])
