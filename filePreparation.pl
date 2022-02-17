@@ -7,7 +7,7 @@ if (@ARGV < 3) {
 $bam1=$ARGV[0];
 $threads=$ARGV[2];
 $motifFile=$ARGV[1];
-
+$peakFile=$ARGV[3];
 
 die "Install samtools\n" unless `samtools --help`;
 die "Install bedtools\n" unless `bedtools --help`;
@@ -43,6 +43,18 @@ while(<f>){
 system("sort -k1,1 -k2,2n $bam1.bed3 > $bam1.sorted.bed3");
 system("mv $bam1.sorted.bed3  $bam1.bed3");
 system("rm $bam1.bam2bed.txt $bam1-sortedByName.bam");
-system("windowBed -a $motifFile -b $bam1.bed3 -w 1000 > $bam1.input");
+
+if ($peakFile=="NA") {
+	system("windowBed -a $motifFile -b $bam1.bed3 -w 1000 > $bam1.input");
+}
+
+else {
+
+	system("windowBed -a $motifFile -b $peakFile -w 1000 | cut -f1-6 | sort -k1,1 -k2,2 | uniq > $bam1.temp.txt");
+	system("windowBed -a $bam1.temp.txt -b $bam1.bed3 -w 1000 > $bam1.input");
+
+}
+
+
 
 #$frmt = "chr1	23409	23420	-	8.227320	GGTGAGTCAGTG	chr1	23159	23370	M01516:364:000000000-CLDFT:1:1115:26082:22502	1	.";
