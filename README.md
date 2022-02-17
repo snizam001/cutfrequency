@@ -52,6 +52,9 @@ Options:
 
 	-h, --help
 		Show this help message and exit
+		
+	-p CHARACTER, --peakFile=CHARACTER
+		If the number of the motifs are higher in the genome and do not have enough memory, then might be interested in exploring cut-frequency at only peaks. If yes then, provide peakFile in the bed format (**OPTIONAL**)
 
 EXAMPLE:
 
