@@ -1,15 +1,18 @@
 # cutfrequency
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/28807444/130489546-74e51a39-23d4-494d-b810-29eb42efa2c1.jpg" align='left' height='200' width='250' />
+</p>
 Simple script to calculate cut frequency around transcription factor binding sites using BAM files (pair-end reads): 
 greenCUT&RUN or CUT&RUN protocol
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/28807444/130489546-74e51a39-23d4-494d-b810-29eb42efa2c1.jpg" />
-</p>
+
 
 Citation: 
 	
-	Nizamuddin et al (2021), Integrating quantitative proteomics with accurate genome profiling of transcription 
-	factors by greenCUT&RUN. Nucleic Acids Research, 46(9) e49 (https://doi.org/10.1093/nar/gkab038)
+	Nizamuddin et al (2021), Integrating quantitative proteomics 
+	with accurate genome profiling of transcription factors by 
+	greenCUT&RUN. Nucleic Acids Research, 46(9) e49 
+	(https://doi.org/10.1093/nar/gkab038)
 
 REQUIREMENTS:
 
